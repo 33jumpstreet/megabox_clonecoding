@@ -14,3 +14,16 @@
 .clearfix:before, .clearfix:after {display: block; content: '';line-height: 0;}
 .clearfix:after {clear: both;}
 '''
+
+### 2. ir효과
+- 이미지를 표현하는 방법에는 img와 baclground 속성으로 표현이 가능
+- img는 이미지가 의미가 있는 경우, background는 이미지가 의미 없는 경우 주로 사용된다. 
+- background를 사용해서 이미지를 표현하는 경우 대체문자를 표현할 수 없기 때문에, 이때 IR효과를 사용한다. 
+```
+/* IR 효과 */
+.ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
+.ir_wa {display:block; overflow:hidden; position:relative; z-index:-1; width:100%; height: 100%;} /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
+.ir_su {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+```
+
+
