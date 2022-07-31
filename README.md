@@ -26,4 +26,26 @@
 .ir_su {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
 ```
 
-
+### 3. 미디어쿼리 
+- 반응형 웹 페이지를 제작하려면 뷰포트와 미디어 쿼리를 사용해야 합니다. 
+- 뷰포트는 피시 화면 비율을 모바일 비율로 바꾸어 주고 미디어 쿼리는 화면 크기에 따라 CSS를 제작합니다. 
+```
+@media 미디어 쿼리의 시작을 의미
+only/not only는 미디어쿼리를 지원하는 브라우저에서만 해석하고 not은 반대를 의미
+media type 미디어 유형을 설정
+and/, and는 둘다 조건에 맞아야 하고 ,는 하나만 맞아도 실행합니다. (and/or 개념)
+조건문/실행문 화면 크기의 조건을 설정하고 그에 따른 실행문을 작성합니다.
+```
+- 미디어 쿼리 적용방법
+1. 외부 링크에서 사용하는 방법 ( 제일 많이 사용)
+```
+<link rel="stylesheet" href="style/css">
+```
+2. 화면 크기별로 CSS 작성
+```
+<link rel="stylesheet" media="all and(min-width:380px)" href="style.css" />
+```
+3. 임포트 시키는 방법
+```
+@import url(style.css)all and (min-width:380px);
+```
